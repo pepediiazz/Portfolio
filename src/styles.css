@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+#particles-js {
+  background-color: black;
+  position: fixed;
+  width: 100vw; /* Cambia a 100vw para ocupar todo el ancho de la ventana */
+  height: 100vh; /* Cambia a 100vh para ocupar toda la altura de la ventana */
+  z-index: -1;
+}
