@@ -1,0 +1,21 @@
+<div class="experience-section">
+  <h1>
+    <span>04</span> Proyectos
+  </h1>
+</div>
+<div class="card-container">
+  <div class="card" *ngFor="let project of projects" (click)="openModal(project)">
+    <div class="front">
+      <img [src]="project.imageUrl" alt="Project Image" style="width: 150px;">
+      <h3>{{ project.title }}</h3>
+      <div class="skills">
+        <img *ngFor="let skill of project.skills" [src]="skill" alt="Skill Icon" style="width: 30px; ">
+      </div>
+    </div>
+    <div class="back">
+    </div>
+  </div>
+</div>
+
+<!-- Modal Component -->
+<app-project-modal #projectModal></app-project-modal>

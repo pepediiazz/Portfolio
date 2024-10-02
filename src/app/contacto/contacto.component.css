@@ -1,0 +1,193 @@
+.experience-section {
+  color: #e0e0e0;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; /* Centra la sección */
+  box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+}
+
+.experience-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 0;
+}
+
+.experience-section h1 span {
+  color: rgb(255, 133, 33);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 8vh;
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra la sección */
+  gap: 40px; /* Espacio entre los elementos de la sección de contacto */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+  padding: 0 10px; /* Padding horizontal para evitar el desbordamiento */
+}
+
+.contact-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-text h2 {
+  font-size: 2.1rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contact-text p {
+  font-size: 1.2rem;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.contact-form {
+  flex: 1;
+  background-color: rgb(0, 0, 0); /* Color de fondo del formulario */
+  padding: 20px; /* Ajustado para que sea más compacto */
+  border-radius: 12px;
+  border: 2px solid black; /* Borde negro */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #fff; /* Color de la etiqueta */
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 4px;
+  position: relative; /* Posicionamiento relativo para los iconos */
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px 20px; /* Añadir padding a la derecha para el icono */
+  font-size: 0.9rem;
+  border: none; /* Sin borde */
+  background-color: transparent; /* Fondo transparente */
+  color: white; /* Color del texto */
+  outline: none; /* Sin contorno al hacer foco */
+}
+
+.icon {
+  position: absolute; /* Posicionamiento absoluto */
+  right: 10px; /* Espaciado desde el borde derecho */
+  color: #aaa; /* Color del icono */
+  pointer-events: none; /* Para que no interfiera con el clic en el input */
+}
+
+.input-group textarea {
+  height: 80px; /* Altura del textarea */
+  resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+}
+
+.button-container {
+  display: flex; /* Usa flexbox para alinear */
+  justify-content: flex-end; /* Alinear a la derecha */
+  margin-top: 20px; /* Espacio superior para separarlo de los campos */
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 15px;
+  background-color: #ffffff; /* Color de fondo del botón */
+  outline: 3px #ffffff solid;
+  outline-offset: -3px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Botón ocupa todo el ancho disponible */
+}
+
+.button .text {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    margin-top: 5vh; /* Espaciado superior reducido */
+    padding: 0; /* Elimina padding para evitar desbordamientos */
+  }
+
+  .contact-text,
+  .contact-form {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que ambos ocupen el 100% de ancho */
+  }
+
+  .contact-text h2 {
+    font-size: 1.8rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+  }
+
+  .contact-text p {
+    font-size: 1rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+  }
+
+  .contact-form {
+    padding: 0px; /* Menos padding en pantallas pequeñas */
+  }
+
+  .form-group label {
+    font-size: 0.9rem; /* Tamaño de fuente de etiqueta más pequeño */
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.85rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+  }
+
+  .button {
+    padding: 10px; /* Aumenta el padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section h1 {
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
+    margin-bottom: 0px;
+  }
+
+  .contact-text h2 {
+    font-size: 1.3rem; /* Tamaño de fuente más pequeño en móviles */
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .contact-text p {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño en móviles */
+    text-align: center;
+
+  }
+}

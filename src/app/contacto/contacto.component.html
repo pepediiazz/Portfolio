@@ -1,0 +1,46 @@
+<div class="experience-section">
+  <h1>
+    <span>05</span> Contacto
+  </h1>
+
+  <div class="contact-section">
+    <div class="contact-text">
+      <h2>¡Gracias por revisar mi portafolio!</h2>
+      <p>Estoy abierto a nuevas oportunidades de colaboración, encargos o proyectos interesantes. Si tienes alguna propuesta, estaré encantado de escuchar tus ideas. No dudes en ponerte en contacto.</p>
+    </div>
+
+    <div class="contact-form">
+      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <div class="input-group">
+            <input type="text" id="name" name="name" [(ngModel)]="nombre" required />
+            <i class="fas fa-user icon"></i> <!-- Icono de usuario -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <div class="input-group">
+            <input type="email" id="email" name="email" [(ngModel)]="email" required />
+            <i class="fas fa-envelope icon"></i> <!-- Icono de correo -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <div class="input-group">
+            <textarea id="message" name="message" rows="3" [(ngModel)]="mensaje" required></textarea>
+            <i class="fas fa-comment icon"></i> <!-- Icono de mensaje -->
+          </div>
+        </div>
+
+        <div class="button-container"> <!-- Contenedor para el botón -->
+          <button class="button" type="submit" [disabled]="!contactForm.form.valid">
+            <p class="text">Enviar</p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

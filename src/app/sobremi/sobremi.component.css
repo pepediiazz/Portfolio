@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30vh;
+  text-align: center;
+}
+.titulo h1 {
+  font-size: 40px;
+  font-weight: 900;
+  color: rgb(255, 133, 33); /* Color del "01" */
+  text-align: center;
+  margin-top: 20px;
+}
+.contenido{
+  color: rgb(214, 214, 214);
+  font-weight: 300;
+  font-size: 19px;
+}
+/* Para pantallas grandes */
+@media (min-width: 768px) {
+  .container {
+    margin-top: 20vh; /* Menos espacio superior en pantallas más grandes */
+  }
+  .titulo h1 {
+    font-size: 40px;
+  }
+  .contenido {
+    font-size: 19px;
+    padding: 0 20px; /* Añadimos algo de relleno para que el texto no quede muy pegado a los bordes */
+  }
+}
+
+/* Para pantallas medianas */
+@media (max-width: 767px) {
+  .container {
+    margin-top: 15vh; /* Reducimos el margen superior en pantallas medianas */
+  }
+  .titulo h1 {
+    font-size: 35px; /* Reducimos ligeramente el tamaño del título */
+  }
+  .contenido {
+    font-size: 17px; /* Reducimos el tamaño del texto */
+    padding: 0 15px;
+  }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 480px) {
+  .container {
+    margin-top: 10vh; /* Reducimos más el margen superior en pantallas pequeñas */
+  }
+  .titulo h1 {
+    font-size: 30px; /* Aún más pequeño en dispositivos móviles */
+  }
+  .contenido {
+    font-size: 16px; /* Hacemos el texto más pequeño para mejor legibilidad en móviles */
+    padding: 0 10px; /* Aumentamos el padding para que el texto no quede muy cerca de los bordes */
+  }
+}

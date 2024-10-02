@@ -1,4 +1,18 @@
-*{
-  margin: 0 ;
-  overflow-y: auto;
+
+body, * {
+  font-family: 'Roboto', sans-serif; /* Aplica la fuente a todo el contenido */
+  margin: 0; /* Elimina el margen por defecto del cuerpo */
+  padding: 0; /* Elimina el padding por defecto del cuerpo */
+  overflow-y: auto; /* Permite el scroll vertical */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+
+
+}
+
+app-main-inicio, app-sobremi, app-skills, app-experiencia, app-proyectos, app-contacto {
+  min-height: 100vh; /* Cada sección ocupa al menos una ventana completa */
+
+  padding: 20px; /* Espacio interior opcional */
 }

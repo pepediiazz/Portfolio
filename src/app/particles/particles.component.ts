@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as ParticlesConfig from '../../assets/particles.json';
 
@@ -14,7 +14,9 @@ declare var particlesJS: any;
   styles: [
     `
       #particles-js {
-        background-color: black;
+        --tw-bg-opacity: 1;
+        background-color: rgb(10 10 10 / var(--tw-bg-opacity));
+        background-image: radial-gradient(ellipse 80% 80% at 50% -20%, #7877c64d, #fff0);
         position: fixed;
         width: 100%;
         height: 100%;
@@ -23,13 +25,14 @@ declare var particlesJS: any;
     `
   ]
 })
-export class ParticlesComponent implements AfterViewInit {
+export class ParticlesComponent implements OnInit {
 
   constructor() {}
-
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.initParticles();
   }
+
+
 
   private initParticles(): void {
     console.log('Initializing particlesJS', particlesJS);
@@ -41,5 +44,4 @@ export class ParticlesComponent implements AfterViewInit {
       console.error('particlesJS is not defined');
     }
   }
-
 }

@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.skills-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 15vh;
+  padding: 0 20px; /* Padding para evitar que los contenidos toquen los bordes */
+}
+
+/* Título de la sección */
+.skills-title {
+  text-align: center; /* Centramos el título */
+}
+
+.skills-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.skills-section h1 span {
+  color: rgb(255, 133, 33);
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* Grid de habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas por defecto */
+  gap: 20px; /* Espacio entre cuadrados */
+}
+
+.skill {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.skill img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.small-icon {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.skill p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: white;
+  text-align: center; /* Centramos el texto debajo del icono */
+  height: 40px;
+}
+
+.skill:hover {
+  background-color: #333;
+  transition: background-color 0.3s;
+}
+
+/* Media queries para hacer la sección responsive */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+  }
+
+  .skills-section h1 {
+    font-size: 2rem; /* Ajustamos el tamaño del título */
+  }
+
+  .skill {
+    height: auto; /* Permitimos que los cuadros tengan altura automática */
+    padding: 15px; /* Ajustamos el padding para pantallas pequeñas */
+  }
+
+  .skill img {
+    width: 60px;
+    height: 60px; /* Reducimos el tamaño de las imágenes */
+  }
+
+  .skill p {
+    font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+  }
+}

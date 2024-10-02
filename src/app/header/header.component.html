@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="icono" (click)="openModal()"> <!-- Añadimos el evento click -->
+        <img src="/foto.jpg" alt="Icono de perfil">
+      </div>
+      <div class="text-container">
+        <p>José Pablo Díaz Marín</p>
+        <p style="margin-left: 5px;">Software Developer</p>
+      </div>
+      <div class="router">
+        <a href="#header">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#skills">Skills</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Modal de la imagen -->
+<div class="modal" *ngIf="showModal" (click)="closeModal()">
+  <span class="close" (click)="closeModal()">&times;</span>
+  <img class="modal-content" [src]="imageSrc" alt="Imagen ampliada">
+</div>

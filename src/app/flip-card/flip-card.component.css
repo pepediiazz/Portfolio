@@ -1,0 +1,165 @@
+.card-container {
+  display: flex;
+  justify-content: space-between; /* Coloca las tarjetas a los extremos */
+  align-items: center;            /* Centra verticalmente */
+  width: 1200px;                  /* Ancho del contenedor */
+  margin: 0 auto;                 /* Centra el contenedor en la página */
+  flex-wrap: nowrap;              /* Evita que las tarjetas se envuelvan */
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+.card {
+  margin: 20px;                   /* Espaciado alrededor de cada tarjeta */
+  width: 500px;                   /* Ancho fijo de cada tarjeta */
+  height: 300px;                  /* Alto fijo para cada tarjeta */
+  perspective: 1000px;            /* Perspectiva para el efecto de giro */
+  position: relative;             /* Para que los elementos hijos se alineen dentro del card */
+  border-radius: 10px;            /* Bordes redondeados */
+  box-shadow: 0px 0px 15px 5px rgba(255, 133, 33, 0.5); /* Luz inicial en los bordes */
+  transition: box-shadow 0.3s ease;
+  animation: glowing 3s infinite; /* Animación de luz continua */
+  margin: 0;
+
+}
+
+.card:hover {
+  box-shadow: 0px 0px 25px 10px rgba(255, 133, 33, 1); /* Aumenta el brillo al hacer hover */
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  transform-origin: center;       /* Asegura que la tarjeta gire alrededor de su centro */
+}
+
+.card-inner.flipped {
+  transform: rotateY(360deg);
+}
+
+
+
+.front {
+  background-color: rgba(20, 20, 20, 0.945); /* Negro transparente */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.5); /* Luz interna */
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;            /* Bordes redondeados */
+  overflow: hidden;               /* Para asegurarse de que el contenido no se desborde */
+}
+
+
+/* Animación de luz anaranjada que se mueve alrededor del borde */
+@keyframes glowing {
+  0% {
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.8),
+                0px 0px 20px 4px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0px 0px 20px 4px rgb(255, 255, 255),
+                0px 0px 40px 8px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0px 0px 10px 2px rgba(253, 253, 253, 0.8),
+                0px 0px 20px 4px rgba(255, 255, 255, 0.5);
+  }
+}
+.experience-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white; /* Texto en blanco */
+  text-align: center; /* Alinear a la izquierda */
+  padding: 0; /* Sin padding para estar lo más a la izquierda posible */
+}
+
+.experience-section h1 span {
+  color: rgb(255, 133, 33); /* Color del "02" */
+  font-size: 2rem;
+  font-weight: 600;
+}
+.experience-section {
+  color: #e0e0e0; /* Texto blanco */
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.front h3{
+  margin-bottom: 0px;
+  margin-right: 12px;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills img {
+  width: 40px; /* Fija el ancho de las imágenes */
+  height: 40px; /* Fija el alto de las imágenes */
+  object-fit: contain; /* Asegura que las imágenes mantengan su proporción */
+  margin-right: 30px; /* Espacio entre las imágenes */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+  border: 1px solid #ccc; /* Opcional: borde para uniformidad */
+  background-color: white; /* Opcional: fondo blanco para mantener uniformidad visual */
+  margin: 10px;
+  margin-right: 12px;
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 250px;
+    align-items: center;
+
+  }
+
+  .front{
+    width: 250px;
+  }
+  .front h3 {
+    font-size: 18px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+    .experience-section h1{
+      width: 360px;
+    }
+  .card-container {
+    width: 0px;
+    flex-direction: column;
+  }
+
+  .front h3 {
+    font-size: 18px;
+    margin-right: 0px;
+
+  }
+
+  .skills img {
+    margin: 5px;
+
+  }
+}

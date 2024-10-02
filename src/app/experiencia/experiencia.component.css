@@ -1,0 +1,125 @@
+/* Estilos para la sección de experiencia */
+.experience-section {
+  color: #e0e0e0;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15vh;
+  overflow-x: hidden; /* Para evitar desbordamiento horizontal */
+  box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho total */
+}
+
+.experience-section h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center; /* Centrar todos los títulos */
+  overflow-wrap: break-word; /* Rompe las palabras largas */
+}
+
+.experience-section h1 span {
+  color: rgb(255, 133, 33); /* Color del número */
+  font-size: 2rem;
+  font-weight: 600;
+  bottom: 0;
+}
+
+.experience-item {
+  margin-bottom: 30px;
+  border-left: 4px solid rgb(255, 133, 33); /* Línea vertical */
+  padding-left: 20px;
+  padding-right: 10px; /* Añadir padding derecho */
+  overflow-wrap: break-word; /* Evitar que el texto se salga */
+  word-wrap: break-word;
+}
+
+.position-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.duration {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Animación del círculo naranja */
+.position-title::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 133, 33);
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.espacio {
+  margin-top: 10vh;
+  text-align: center; /* Centrar "03 Datos Académicos" */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .experience-section h1 {
+    font-size: 2rem; /* Ajuste del tamaño del título */
+  }
+
+  .experience-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 10px; /* Añadir padding derecho para dispositivos pequeños */
+  }
+
+  .position-title {
+    font-size: 1.3rem;
+  }
+  .experience-section h1 span {
+    color: rgb(255, 133, 33); /* Color del número */
+    font-size: 2rem; /* Reducir el tamaño del número */
+    font-weight: 600;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section h1 {
+    font-size: 1.8rem; /* Ajuste adicional del título */
+  }
+
+  .experience-item {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 5px; /* Reducir padding en móviles */
+
+  }
+  .experience-section h1 span {
+    color: rgb(255, 133, 33); /* Color del número */
+    font-size: 2rem; /* Reducir el tamaño del número */
+    font-weight: 600;
+  }
+
+  .position-title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+
+
