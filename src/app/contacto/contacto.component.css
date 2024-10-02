@@ -138,6 +138,7 @@
     flex-direction: column; /* Cambia a columna en pantallas pequeñas */
     margin-top: 5vh; /* Espaciado superior reducido */
     padding: 0; /* Elimina padding para evitar desbordamientos */
+    margin-bottom: 5vh;
   }
 
   .contact-text,
@@ -190,4 +191,7 @@
     text-align: center;
 
   }
+}
+#este{
+  color: #e4e4e4;
 }
