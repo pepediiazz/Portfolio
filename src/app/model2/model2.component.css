@@ -1,0 +1,165 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: rgb(197, 197, 197);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 850px;
+  max-height: 330px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+padding-top: 10px;
+}
+
+.project-description {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.video-container {
+  flex: 1;
+}
+
+.video-container iframe {
+  margin-top: 15px;
+  width: 100%;
+  height: 265px; /* Aumentamos la altura del video */
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: right; /* Alinear botones a la derecha */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px; /* Disminuir padding horizontal para que sean más pequeños */
+  background-color: #181717;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  width: 150px; /* Cambiar el ancho a un valor más pequeño */
+}
+
+.button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 0.9em; /* Disminuir el tamaño de la fuente */
+  transition: 400ms;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #181717;
+}
+
+.button:hover svg path {
+  fill: #181717;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .modal-content {
+    max-width: 90%;
+    max-height: 71%;
+    padding: 20px;
+    margin-bottom: 10vh;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 300px; /* Ajustamos la altura del video para pantallas más pequeñas */
+  }
+
+  .button-container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .button {
+    width: 140px; /* Botones un poco más pequeños en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    max-height: 83%;
+    min-height: 71%;
+    margin-bottom: 6vh;
+    padding: 5px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-description {
+    font-size: 12px;
+    margin: 2px;
+    text-align: center;  }
+
+  .video-container iframe {
+    height: 195px; /* Aumentamos la altura en móviles */
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center; /* Centramos también en vertical */
+  }
+
+  .button {
+    width: 100%; /* Botones ocupan todo el ancho disponible en pantallas pequeñas */
+    padding: 5px; /* Ajustar el padding en móviles */
+    font-size: 0.9em;
+  }
+}

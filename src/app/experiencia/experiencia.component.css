@@ -4,11 +4,9 @@
   padding: 20px;
   font-family: 'Arial', sans-serif;
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
   margin-top: 15vh;
-  overflow-x: hidden; /* Para evitar desbordamiento horizontal */
-  box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho total */
+  box-sizing: border-box;
 }
 
 .experience-section h1 {
@@ -16,110 +14,71 @@
   margin-bottom: 30px;
   font-weight: bold;
   color: white;
-  text-align: center; /* Centrar todos los títulos */
-  overflow-wrap: break-word; /* Rompe las palabras largas */
+  text-align: center;
 }
 
 .experience-section h1 span {
-  color: rgb(255, 133, 33); /* Color del número */
+  color: rgb(255, 133, 33);
   font-size: 2rem;
   font-weight: 600;
-  bottom: 0;
 }
 
 .experience-item {
   margin-bottom: 30px;
-  border-left: 4px solid rgb(255, 133, 33); /* Línea vertical */
+  border-left: 4px solid rgb(255, 133, 33);
   padding-left: 20px;
-  padding-right: 10px; /* Añadir padding derecho */
-  overflow-wrap: break-word; /* Evitar que el texto se salga */
-  word-wrap: break-word;
 }
 
 .position-title {
   font-weight: bold;
   font-size: 1.5rem;
+  margin-bottom: 5px;
 }
 
 .duration {
   color: #aaa;
   font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 .description {
-  font-size: 1.1rem;
   margin-top: 10px;
-  line-height: 1.6; /* Mejora la legibilidad */
+  list-style-type: none;
+  padding: 0;
 }
 
-/* Animación del círculo naranja */
-.position-title::before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: rgb(255, 133, 33);
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
+.description li {
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  padding-left: 25px;
 }
 
-.espacio {
-  margin-top: 10vh;
-  text-align: center; /* Centrar "03 Datos Académicos" */
+.description li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgb(255, 133, 33);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-/* Media Queries para pantallas más pequeñas */
+/* Responsivo */
 @media (max-width: 768px) {
   .experience-section h1 {
-    font-size: 2rem; /* Ajuste del tamaño del título */
+    font-size: 1.8rem;
   }
 
   .experience-item {
-    margin-bottom: 20px;
     padding-left: 15px;
-    padding-right: 10px; /* Añadir padding derecho para dispositivos pequeños */
   }
 
   .position-title {
     font-size: 1.3rem;
   }
-  .experience-section h1 span {
-    color: rgb(255, 133, 33); /* Color del número */
-    font-size: 2rem; /* Reducir el tamaño del número */
-    font-weight: 600;
-  }
 
-  .description {
-    font-size: 1rem;
+  .description li {
+    padding-left: 20px;
   }
 }
-
-@media (max-width: 480px) {
-  .experience-section h1 {
-    font-size: 1.8rem; /* Ajuste adicional del título */
-  }
-
-  .experience-item {
-    margin-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 5px; /* Reducir padding en móviles */
-
-  }
-  .experience-section h1 span {
-    color: rgb(255, 133, 33); /* Color del número */
-    font-size: 2rem; /* Reducir el tamaño del número */
-    font-weight: 600;
-  }
-
-  .position-title {
-    font-size: 1.2rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-  }
-}
-
-
-
